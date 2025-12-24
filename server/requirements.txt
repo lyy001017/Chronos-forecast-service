@@ -1,0 +1,11 @@
+fastapi
+fastmcp
+uvicorn
+torch
+matplotlib
+pandas
+polars
+chronos-forecasting
+anyio
+trio
+ollmcp

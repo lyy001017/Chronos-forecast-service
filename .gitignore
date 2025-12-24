@@ -38,6 +38,8 @@ venv/
 server/app/models/chronos_models/*
 !server/app/models/chronos_models/.gitkeep
 server/chronos-2-finetuned/
+!server/app/models/chronos_models/finetuned.gitkeep
+!server/app/models/chronos_models/unfinetuned.gitkeep
 
 ############################
 # Data

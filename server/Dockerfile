@@ -16,7 +16,7 @@ COPY server/requirements.txt /app/server/requirements.txt
 RUN pip install --upgrade pip && \
     pip install -r /app/server/requirements.txt  \
     -i https://pypi.tuna.tsinghua.edu.cn/simple \
-    -- default-timeout = 1000
+    --default-timeout=1000
 
 # 3. 复制源代码 (保持 server/app 的结构)
 COPY server /app/server

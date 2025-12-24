@@ -13,11 +13,9 @@ WORKDIR /app
 # 2. 安装依赖 (显式指定路径，适配根目录构建上下文)
 COPY server/requirements.txt /app/server/requirements.txt
 
-RUN pip install --upgrade pip && \
-    pip install -r /app/server/requirements.txt  \
-    -i https://pypi.tuna.tsinghua.edu.cn/simple \
-    --default-timeout=1000
-
+RUN pip install --upgrade pip \
+    && pip install -r /app/server/requirements.txt 
+    
 # 3. 复制源代码 (保持 server/app 的结构)
 COPY server /app/server
 

@@ -19,7 +19,7 @@ router = APIRouter(tags=["预测接口"])
 
 @router.post("/", response_model=PredictResponse)
 async def predict(request: PredictRequest,
-                  use_fintuned :bool = Query(
+                  use_finetuned :bool = Query(
                       default=True,
                       description='是否使用微调模型，如果使用可在mode选择针对特定任务'),
                   mode : str = Query(
@@ -178,7 +178,7 @@ async def predict(request: PredictRequest,
         quantile_levels=request.quantiles,
         future_cov_df=future_cov_df,
         test_df=None,
-        use_finetuned=use_fintuned,
+        use_finetuned=use_finetuned,
         mode=mode,
         device = device,
         model_id = model_id

@@ -1,5 +1,5 @@
 from chronos import BaseChronosPipeline,Chronos2Pipeline
-
+from functools import lru_cache
 
 import logging
 from pathlib import Path
@@ -11,6 +11,7 @@ USER_DIR = MODELS_DIR / "users"
 FINETUNED_DIR = MODELS_DIR / "finetuned"
 UNFINETUNED_DIR = MODELS_DIR / "unfinetuned"
 
+@lru_cache(maxsize=1)
 def get_pipeline(mode:str,use_finetuned:bool,device:str,model_id:str=None):
     if model_id:
         model_path = USER_DIR / model_id

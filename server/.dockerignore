@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.log
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Data & Models (关键：忽略模型和数据，通过 Volume 挂载)
+app/models/chronos_models/
+*.csv
+*.parquet
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yaml
+
+# IDE
+.vscode/
+.idea/
